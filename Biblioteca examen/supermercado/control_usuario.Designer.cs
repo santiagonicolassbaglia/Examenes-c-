@@ -35,6 +35,7 @@
             this.btn_hardcodear = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_borrar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -101,12 +102,22 @@
             this.btn_borrar.Text = "BORRAR";
             this.btn_borrar.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(278, 130);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // control_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_borrar);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_hardcodear);
@@ -129,5 +140,6 @@
         private System.Windows.Forms.Button btn_hardcodear;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.Button btn_borrar;
+        private System.Windows.Forms.Button button1;
     }
 }
