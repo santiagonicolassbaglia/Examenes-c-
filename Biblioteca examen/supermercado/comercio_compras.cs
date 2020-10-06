@@ -25,17 +25,7 @@ namespace supermercado
 
         
 
-        /* private void opcionControl_Click(object sender, EventArgs e)
-         {
-             control_de_usuarios opcion2 = new control_de_usuarios();
-             opcion2.Show();
-         }*/
-
-        /*   private void opcionInventario_Click(object sender, EventArgs e)
-           {
-              inventario opcion3 = new inventario();
-               opcion3.Show();
-           }*/
+        
 
         private void opcionCompra_Click(object sender, EventArgs e)
         {
