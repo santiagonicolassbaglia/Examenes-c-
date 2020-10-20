@@ -61,6 +61,12 @@
     <Compile Include="comercio_compras.Designer.cs">
       <DependentUpon>comercio_compras.cs</DependentUpon>
     </Compile>
+    <Compile Include="controlEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controlEmpleado.Designer.cs">
+      <DependentUpon>controlEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="compras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,11 +79,11 @@
     <Compile Include="control_usuario.Designer.cs">
       <DependentUpon>control_usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,17 +93,20 @@
     <EmbeddedResource Include="comercio_compras.resx">
       <DependentUpon>comercio_compras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="controlEmpleado.resx">
+      <DependentUpon>controlEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="compras.resx">
       <DependentUpon>compras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control_usuario.resx">
       <DependentUpon>control_usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.aa.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Login.aa.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

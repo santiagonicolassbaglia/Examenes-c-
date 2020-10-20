@@ -38,3 +38,4 @@ C:\Users\santi\Desktop\Examen 1 c#\Examenes-c-\Examenes-c-sharp\Biblioteca exame
 C:\Users\santi\Desktop\Examen 1 c#\Examenes-c-\Examenes-c-sharp\Biblioteca examen\supermercado\obj\Debug\Comercio.csproj.CopyComplete
 C:\Users\santi\Desktop\Examen 1 c#\Examenes-c-\Examenes-c-sharp\Biblioteca examen\supermercado\obj\Debug\supermercado.exe
 C:\Users\santi\Desktop\Examen 1 c#\Examenes-c-\Examenes-c-sharp\Biblioteca examen\supermercado\obj\Debug\supermercado.pdb
+C:\Users\santi\Desktop\Examen 1 c#\Examenes-c-\Examenes-c-sharp\Biblioteca examen\supermercado\obj\Debug\supermercado.compra2.resources

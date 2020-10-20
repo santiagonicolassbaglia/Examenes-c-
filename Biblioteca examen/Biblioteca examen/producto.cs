@@ -6,171 +6,312 @@ using System.Threading.Tasks;
 
 namespace Biblioteca_examen
 {
-   public class producto
+    public abstract class Producto
     {
-        string marca;
-        float precio;
-        bool stock;
-
-        public producto(string marca, float precio, bool stock)
+        public enum ETipo
         {
-            this.marca = marca;
+            Almacen, CervezasYGaseosa, Limpieza
+        }
+        int numArticulo;
+        string descripcion;
+        double precio;
+        int stock;
+        ETipo tipoProducto;
+
+        #region Constructores
+
+        /// <summary>
+        /// Constructor privado de la clase Producto
+        /// </summary>
+        private Producto()
+        {
+            this.numArticulo = -1;
+            this.descripcion = "Sin asignar";
+            this.precio = -1;
+            this.stock = -1;
+        }
+
+        /// <summary>
+        /// Constructor público de la clase Producto
+        /// </summary>
+        /// <param name="numArticulo">Numero de articulo del producto</param>
+        /// <param name="descripcion">Descripción del producto</param>
+        /// <param name="precio">Precio del producto</param>
+        /// <param name="stock">Stock del producto</param>
+        /// <param name="tipoProd">Tipo de producto</param>
+        public Producto(int numArticulo, string descripcion, double precio, int stock, ETipo tipoProd) : this()
+        {
+            this.numArticulo = numArticulo;
+            this.descripcion = descripcion;
             this.precio = precio;
             this.stock = stock;
+            this.tipoProducto = tipoProd;
         }
 
-        public string Marca
+        #endregion
+
+        #region Propiedades
+        /// <summary>
+        /// Get de numero de artículo
+        /// </summary>
+        public int NumArticulo
         {
-            get { return this.marca; }
-
+            get { return this.numArticulo; }
         }
 
-        public float Precio
+        /// <summary>
+        /// Get de tipo de producto
+        /// </summary>
+        public string Tipo
         {
-            get { return this.precio; }
-
+            get { return this.tipoProducto.ToString(); }
         }
 
-
-        public bool Stock
+        /// <summary>
+        /// Get de descripción
+        /// </summary>
+        public string Descripcion
         {
-            get { return this.stock; }
-
+            get { return this.descripcion; }
         }
 
-        public static string MostrarProducto(producto producto)
+        /// <summary>
+        /// Get y Set del precio unitario, valida que el precio sea mayor a 0
+        /// </summary>
+        public double PrecioUnitario
         {
-            StringBuilder stringBuilder = new StringBuilder();// te hace una concatenacion con los string
-            stringBuilder.AppendLine(string.Format("Producto marca {0}", producto.marca));
-            stringBuilder.AppendLine(string.Format("Producto precio {0}", producto.precio));
-
-
-            return stringBuilder.ToString();
-
+            get
+            {
+                return this.precio;
+            }
+            set
+            {
+                if (this.stock > 0)
+                {
+                    this.precio = value;
+                }
+            }
         }
 
-
-
-
-
-
-        public enum Productos_cerveza
-
+        /// <summary>
+        /// Get y Set de las unidades del producto, valida que la cantidad sea mayor a 0
+        /// </summary>
+        public int Unidades
         {
-
-            duff,
-
-            quilmes,
-
-            brahama,
-
-            stella,
-
-            heinecke,
+            get
+            {
+                return this.stock;
+            }
+            set
+            {
+                if (this.stock > 0)
+                {
+                    this.stock = value;
+                }
+            }
         }
 
-        public enum Productos_cocina
+        #endregion
+
+        #region Métodos
+
+        /// <summary>
+        /// Muestra los datos del Producto
+        /// </summary>
+        /// <returns>String con los datos del producto</returns>
+        public virtual string MostrarProducto()
         {
-            leche,
+            StringBuilder miProd = new StringBuilder();
 
-            cafe,
+            miProd.AppendLine($"N° Artículo: {this.numArticulo}");
+            miProd.AppendLine($"Descripcion: {this.descripcion}");
+            miProd.AppendLine($"Precio: ${this.precio}");
+            miProd.AppendLine($"Stock: {this.stock}");
 
-            yerba,
-
-            azucar,
-
-            helado,
-
-            aceite,
-
-            rosquillas,
-
-            sal,
-            
-            galletitas
+            return miProd.ToString();
         }
 
+        #endregion
 
-          public enum Productos_gaseosa
+        #region Sobrecargas
+
+        /// <summary>
+        /// Override de MostrarProducto
+        /// </summary>
+        /// <returns>los datos del producto</returns>
+        public  string ToString()
         {
-
-            coca,
-
-            sevenUp,
-
-            manaos,
-
-            sprite,
-            
-            pepsi
+            return this.MostrarProducto();
         }
 
-
-
-
-        public enum Productos_limpieza
+        /// <summary>
+        /// Sobrecarga de operador '==' que verifica si un Producto ya existe en base al Id
+        /// </summary>
+        /// <param name="unProducto">Producto a buscar</param>
+        /// <param name="misProductos">lista de Productos</param>
+        /// <returns>True si es igual, false si es distinto</returns>
+        public static bool operator ==(Producto unProducto, List<Producto> misProductos)
         {
+            bool retorno = false;
 
-            desodorante,
-
-            jabon,
-
-            dentifrico,
-
-            ala,
-
-            magistral
+            for (int i = 0; i < misProductos.Count; i++)
+            {
+                if (unProducto.numArticulo == misProductos[i].numArticulo)
+                {
+                    retorno = true;
+                }
+            }
+            return retorno;
         }
 
-
-        public enum Productos_fiambres
+        /// <summary>
+        /// Sobrecarga de operador '+' que agrega un producto a la lista de productos
+        /// </summary>
+        /// <param name="unProducto"></param>
+        /// <param name="misProductos"></param>
+        /// <returns>True si pudo agregar, false si no</returns>
+        public static bool operator !=(Producto unProducto, List<Producto> misProductos)
         {
-
-
-            salame,
-
-            queso,
-            
-            mortadela,
-
-            jamon,
-
-
+            return !(unProducto == misProductos);
         }
 
-
-        }
-
-        // ...
-/*
-        DiasDeLaSemana dia = DiasDeLaSemana.Lunes;
-
-        int i = (int)DiasDeLaSemana.Lunes;
-
-        Console.WriteLine(dia); // Mostrará "Lunes"
-
-        Console.WriteLine(i); // Mostrará 1
-*/
-
-
-/*
-        // para verificar que se aplique el descuento entre el producto y la persona simpsons
-        public static bool operator == (producto producto1, cliente apellido )
+        /// <summary>
+        /// Sobrecarga de operador '+' que agrega un producto a la lista de productos
+        /// </summary>
+        /// <param name="misProductos">Lista de productos</param>
+        /// <param name="unProducto">Producto a agregar</param>
+        /// <returns>True si pudo agregar, false si no</returns>
+        public static bool operator +(List<Producto> misProductos, Producto unProducto)
         {
-            return (producto1 == cliente.);
+            bool retorno = false;
+
+            if (unProducto != misProductos)
+            {
+                misProductos.Add(unProducto);
+                retorno = true;
+            }
+
+            return retorno;
         }
 
 
-
-        public static bool operator !=(producto producto1, cliente apellido)
+        /// <summary>
+        /// Sobrecarga de operador '-' que elimina un producto de la lista de productos
+        /// </summary>
+        /// <param name="misProductos">Lista de productos</param>
+        /// <param name="unProducto">Producto a eliminar</param>
+        /// <returns>True si pudo eliminar, false si no</returns>
+        public static bool operator -(List<Producto> misProductos, Producto unProducto)
         {
-            return !(producto1 == cliente.apellido);
+            return !(misProductos + unProducto);
         }
 
 
-        */
-
-
-
+        #endregion
     
+
+
+
+
+    public static List<Producto> HardcodeoProductos()
+    {
+        List<Producto> misProductos = new List<Producto>();
+
+        misProductos.Add(new productoCervezayGaseosa(4562, "Duff", 250, 4, Producto.ETipo.CervezasYGaseosa));
+        misProductos.Add(new productoCervezayGaseosa(4563, "Quilmes", 70, 19, Producto.ETipo.CervezasYGaseosa));
+        misProductos.Add(new productoCervezayGaseosa(4564, "Pepsi", 60, 18, Producto.ETipo.CervezasYGaseosa));
+        misProductos.Add(new ProductoAlmacen(1102, "Donas", 40, 10, Producto.ETipo.Almacen));
+        misProductos.Add(new productoCervezayGaseosa(4565, "Buzz-cola", 50, 8, Producto.ETipo.CervezasYGaseosa));
+        misProductos.Add(new ProductoAlmacen(1103, "Raspados", 60, 10, Producto.ETipo.Almacen));
+        misProductos.Add(new ProductoAlmacen(1104, "Leche", 40, 10, Producto.ETipo.Almacen));
+        misProductos.Add(new productosLimpieza(1982, "Desodorante", 90, 251, Producto.ETipo.Limpieza));
+        misProductos.Add(new productosLimpieza(1983, "Dentifrico", 60, 3, Producto.ETipo.Limpieza));
+        misProductos.Add(new ProductoAlmacen(1105, "Salchichas", 40, 100, Producto.ETipo.Almacen));
+        misProductos.Add(new ProductoAlmacen(1106, "Caramelos", 2, 300, Producto.ETipo.Almacen));
+
+
+        return misProductos;
+
+    }
+
+
+
+
+
+
+
+
+
+        /*  public enum Productos
+
+          {
+
+              duff,
+
+              quilmes,
+
+              brahama,
+
+              stella,
+
+              heinecke,
+
+              leche,
+
+              cafe,
+
+              yerba,
+
+              azucar,
+
+              helado,
+
+              aceite,
+
+              rosquillas,
+
+              sal,
+
+              galletitas,
+
+              coca,
+
+              sevenUp,
+
+              manaos,
+
+              sprite,
+
+              pepsi,
+
+              desodorante,
+
+              jabon,
+
+              dentifrico,
+
+              ala,
+
+              magistral,
+
+              salame,
+
+              queso,
+
+              mortadela,
+
+              jamon,
+          }
+        */
+    }
+
 }
+
+
+
+
+
+
+
+
+

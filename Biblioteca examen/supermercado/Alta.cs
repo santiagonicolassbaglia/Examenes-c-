@@ -27,11 +27,7 @@ namespace supermercado
             InitializeComponent();
         }
 
-        private void Alta_Cliente_Load(object sender, EventArgs e)
-        {
-
-        }
-
+    
         private void aceptar_alta_Click(object sender, EventArgs e)
         {
             int dni;

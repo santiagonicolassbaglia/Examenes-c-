@@ -45,6 +45,7 @@
             this.chk_dentifrico = new System.Windows.Forms.CheckBox();
             this.chk_salchchas = new System.Windows.Forms.CheckBox();
             this.chk_caramelos = new System.Windows.Forms.CheckBox();
+            this.stockMenor10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -223,10 +224,23 @@
             this.chk_caramelos.Text = "Caramelos $2";
             this.chk_caramelos.UseVisualStyleBackColor = true;
             // 
+            // stockMenor10
+            // 
+            this.stockMenor10.BackColor = System.Drawing.Color.Salmon;
+            this.stockMenor10.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stockMenor10.Location = new System.Drawing.Point(245, 296);
+            this.stockMenor10.Name = "stockMenor10";
+            this.stockMenor10.Size = new System.Drawing.Size(116, 59);
+            this.stockMenor10.TabIndex = 19;
+            this.stockMenor10.Text = "Productos con poco stock (Oferta ultimas unidades!)";
+            this.stockMenor10.UseVisualStyleBackColor = false;
+            this.stockMenor10.Click += new System.EventHandler(this.stockMenor10_Click);
+            // 
             // compras
             // 
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(615, 420);
+            this.Controls.Add(this.stockMenor10);
             this.Controls.Add(this.chk_caramelos);
             this.Controls.Add(this.chk_salchchas);
             this.Controls.Add(this.chk_dentifrico);
@@ -243,6 +257,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "compras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -273,5 +288,6 @@
         private System.Windows.Forms.CheckBox chk_dentifrico;
         private System.Windows.Forms.CheckBox chk_salchchas;
         private System.Windows.Forms.CheckBox chk_caramelos;
+        private System.Windows.Forms.Button stockMenor10;
     }
 }

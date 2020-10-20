@@ -33,6 +33,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionControl = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlDeEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionCompra = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionSalir = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,6 +54,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.inventarioToolStripMenuItem,
@@ -66,20 +68,29 @@
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opcionControl});
+            this.opcionControl,
+            this.controlDeEmpleadoToolStripMenuItem});
             this.archivoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.archivoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("archivoToolStripMenuItem.Image")));
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(108, 29);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(112, 29);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // opcionControl
             // 
             this.opcionControl.Image = ((System.Drawing.Image)(resources.GetObject("opcionControl.Image")));
             this.opcionControl.Name = "opcionControl";
-            this.opcionControl.Size = new System.Drawing.Size(251, 30);
+            this.opcionControl.Size = new System.Drawing.Size(276, 30);
             this.opcionControl.Text = "Control de usuario";
             this.opcionControl.Click += new System.EventHandler(this.opcionControl_Click);
+            // 
+            // controlDeEmpleadoToolStripMenuItem
+            // 
+            this.controlDeEmpleadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("controlDeEmpleadoToolStripMenuItem.Image")));
+            this.controlDeEmpleadoToolStripMenuItem.Name = "controlDeEmpleadoToolStripMenuItem";
+            this.controlDeEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(276, 30);
+            this.controlDeEmpleadoToolStripMenuItem.Text = "Control de Empleado";
+            this.controlDeEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.controlDeEmpleadoToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 
@@ -88,14 +99,14 @@
             this.inventarioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("inventarioToolStripMenuItem.Image")));
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(119, 29);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(123, 29);
             this.inventarioToolStripMenuItem.Text = "Compras";
             // 
             // opcionCompra
             // 
             this.opcionCompra.Image = ((System.Drawing.Image)(resources.GetObject("opcionCompra.Image")));
             this.opcionCompra.Name = "opcionCompra";
-            this.opcionCompra.Size = new System.Drawing.Size(176, 30);
+            this.opcionCompra.Size = new System.Drawing.Size(167, 30);
             this.opcionCompra.Text = "Compras";
             this.opcionCompra.Click += new System.EventHandler(this.opcionCompra_Click);
             // 
@@ -107,14 +118,14 @@
             this.opcionSalir.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.opcionSalir.Image = ((System.Drawing.Image)(resources.GetObject("opcionSalir.Image")));
             this.opcionSalir.Name = "opcionSalir";
-            this.opcionSalir.Size = new System.Drawing.Size(79, 29);
+            this.opcionSalir.Size = new System.Drawing.Size(83, 29);
             this.opcionSalir.Text = "Salir";
             // 
             // cerrarSesión
             // 
             this.cerrarSesión.Image = ((System.Drawing.Image)(resources.GetObject("cerrarSesión.Image")));
             this.cerrarSesión.Name = "cerrarSesión";
-            this.cerrarSesión.Size = new System.Drawing.Size(200, 30);
+            this.cerrarSesión.Size = new System.Drawing.Size(204, 30);
             this.cerrarSesión.Text = "Cerrar sesión";
             this.cerrarSesión.Click += new System.EventHandler(this.cerrarSesión_Click);
             // 
@@ -122,7 +133,7 @@
             // 
             this.salir.Image = ((System.Drawing.Image)(resources.GetObject("salir.Image")));
             this.salir.Name = "salir";
-            this.salir.Size = new System.Drawing.Size(200, 30);
+            this.salir.Size = new System.Drawing.Size(204, 30);
             this.salir.Text = "Salir.";
             this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
@@ -147,6 +158,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "comercio_compras";
@@ -173,5 +185,6 @@
         private System.Windows.Forms.ToolStripMenuItem opcionSalir;
         private System.Windows.Forms.ToolStripMenuItem salir;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesión;
+        private System.Windows.Forms.ToolStripMenuItem controlDeEmpleadoToolStripMenuItem;
     }
 }

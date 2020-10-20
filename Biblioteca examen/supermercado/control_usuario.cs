@@ -14,14 +14,20 @@ namespace supermercado
 
     public partial class control_usuario : Form
     {
+
+
         static List<cliente> listaCliente;
         int i;
-
+        cliente miCliente;
         public control_usuario()
         {
             listaCliente = new List<cliente>();
             InitializeComponent();
         }
+
+
+
+        public cliente MiCliente { get => miCliente; set => miCliente = value; }
 
         private void btn_salir_Click(object sender, EventArgs e)
         {
@@ -34,9 +40,12 @@ namespace supermercado
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            // creo un nuevo renglon
 
-            int i = dataGridView_Productos.Rows.Add(); // rows es renglon y add agrega
+            
+            
+        // creo un nuevo renglon
+
+        int i = dataGridView_Productos.Rows.Add(); // rows es renglon y add agrega
 
             // cual es la selda que voy a utilizar( cells) y en que posicion [i]
 
@@ -45,6 +54,19 @@ namespace supermercado
             dataGridView_Productos.Rows[i].Cells[1].Value = text_dni.Text;
             dataGridView_Productos.Rows[i].Cells[2].Value = text_usuario.Text;
             dataGridView_Productos.Rows[i].Cells[3].Value = text_contraseña.Text;
+
+
+            int dni;
+            if (int.TryParse(this.text_dni.Text, out dni))
+            {
+               miCliente = new cliente(this.txt_nombre.Text,
+                     dni,
+                    this.text_usuario.Text, this.text_contraseña.Text, this.txT_apellido.Text);
+                
+               listaCliente.Add(miCliente);
+                this.DialogResult = DialogResult.OK;
+            }
+
 
 
             //limpio los txt
@@ -75,6 +97,7 @@ namespace supermercado
             if (i != -1)
             {
                 dataGridView_Productos.Rows.RemoveAt(i);
+                listaCliente.Remove(miCliente);
             }
         }
 

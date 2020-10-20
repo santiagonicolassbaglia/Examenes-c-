@@ -57,9 +57,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-15, -21);
+            this.pictureBox1.Location = new System.Drawing.Point(-7, -189);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 616);
+            this.pictureBox1.Size = new System.Drawing.Size(146, 789);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -110,9 +110,9 @@
             // 
             this.btn_Agregar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar.Location = new System.Drawing.Point(191, 362);
+            this.btn_Agregar.Location = new System.Drawing.Point(207, 398);
             this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(101, 33);
+            this.btn_Agregar.Size = new System.Drawing.Size(124, 53);
             this.btn_Agregar.TabIndex = 2;
             this.btn_Agregar.Text = "AGREGAR";
             this.btn_Agregar.UseVisualStyleBackColor = false;
@@ -122,9 +122,9 @@
             // 
             this.btn_salir.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salir.Location = new System.Drawing.Point(248, 436);
+            this.btn_salir.Location = new System.Drawing.Point(259, 494);
             this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(146, 36);
+            this.btn_salir.Size = new System.Drawing.Size(188, 67);
             this.btn_salir.TabIndex = 5;
             this.btn_salir.Text = "SALIR";
             this.btn_salir.UseVisualStyleBackColor = false;
@@ -134,9 +134,9 @@
             // 
             this.btn_borrar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_borrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_borrar.Location = new System.Drawing.Point(346, 362);
+            this.btn_borrar.Location = new System.Drawing.Point(379, 398);
             this.btn_borrar.Name = "btn_borrar";
-            this.btn_borrar.Size = new System.Drawing.Size(101, 33);
+            this.btn_borrar.Size = new System.Drawing.Size(128, 53);
             this.btn_borrar.TabIndex = 6;
             this.btn_borrar.Text = "BORRAR";
             this.btn_borrar.UseVisualStyleBackColor = false;
@@ -153,21 +153,21 @@
             // 
             this.text_dni.Location = new System.Drawing.Point(346, 198);
             this.text_dni.Name = "text_dni";
-            this.text_dni.Size = new System.Drawing.Size(178, 20);
+            this.text_dni.Size = new System.Drawing.Size(203, 20);
             this.text_dni.TabIndex = 8;
             // 
             // text_usuario
             // 
             this.text_usuario.Location = new System.Drawing.Point(346, 250);
             this.text_usuario.Name = "text_usuario";
-            this.text_usuario.Size = new System.Drawing.Size(178, 20);
+            this.text_usuario.Size = new System.Drawing.Size(203, 20);
             this.text_usuario.TabIndex = 9;
             // 
             // text_contraseña
             // 
             this.text_contraseña.Location = new System.Drawing.Point(346, 300);
             this.text_contraseña.Name = "text_contraseña";
-            this.text_contraseña.Size = new System.Drawing.Size(178, 20);
+            this.text_contraseña.Size = new System.Drawing.Size(203, 20);
             this.text_contraseña.TabIndex = 10;
             // 
             // label1
@@ -239,7 +239,7 @@
             // 
             this.txT_apellido.Location = new System.Drawing.Point(346, 140);
             this.txT_apellido.Name = "txT_apellido";
-            this.txT_apellido.Size = new System.Drawing.Size(178, 20);
+            this.txT_apellido.Size = new System.Drawing.Size(203, 20);
             this.txT_apellido.TabIndex = 17;
             // 
             // control_usuario

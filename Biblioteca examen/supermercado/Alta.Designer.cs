@@ -56,7 +56,6 @@
             this.nombre_alta.Name = "nombre_alta";
             this.nombre_alta.Size = new System.Drawing.Size(233, 20);
             this.nombre_alta.TabIndex = 2;
-           
             // 
             // apellido_alta
             // 
@@ -166,7 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(488, 514);
+            this.ClientSize = new System.Drawing.Size(481, 509);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.aceptar_alta);
             this.Controls.Add(this.contraseña_alta);
@@ -179,9 +178,10 @@
             this.Controls.Add(this.usuario_alta);
             this.Controls.Add(this.apellido_alta);
             this.Controls.Add(this.nombre_alta);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Alta_Cliente";
             this.Text = "Alta Cliente";
-            this.Load += new System.EventHandler(this.Alta_Cliente_Load);
+            
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

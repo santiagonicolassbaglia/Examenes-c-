@@ -17,11 +17,13 @@ namespace Biblioteca_examen
         public List<cliente> MiClientess;
 
         cliente ClienteOk;
+        Producto ProductoOk;
 
         public compras(cliente Cliente)
         {
             InitializeComponent();
             this.ClienteOk = Cliente;
+            
             MiClientess = control_usuario.HardcodeoClientes();
 
         }
@@ -29,43 +31,208 @@ namespace Biblioteca_examen
 
         private void btn_comprar_Click(object sender, EventArgs e)
         {
-
-            int total = 0;
-
+              List<Producto> misProductos = new List<Producto>();
+              misProductos =  Producto.HardcodeoProductos();
+            Double total = 0;
 
 
             if (chk_Duff.Checked)
-                total = total + 250;
+            {
+                foreach (Producto item in misProductos)
+                {
+                    if (item.NumArticulo == 4562)
+                    {
+                        total = total + item.PrecioUnitario;
+                        item.Unidades--;
+                        if (item.Unidades <= 0)
+                        {
+                            MessageBox.Show("Disculpe nos quedamos sin stock del sierto producto:" , item.Tipo);
+                        }
+                    }
+                }
+                
+            }
 
             if (chk_Quilmes.Checked)
-                total = total + 70;
-
+            {
+                foreach (Producto item in misProductos)
+                {
+                    if (item.NumArticulo == 4563)
+                    {
+                        total = total + item.PrecioUnitario;
+                        item.Unidades--;
+                        if (item.Unidades <= 0)
+                        {
+                            MessageBox.Show("Disculpe nos quedamos sin stock del sierto producto:", item.Tipo);
+                        }
+                    }
+                }
+            }
+           
+            
+            
             if (chk_Pepsi.Checked)
-                total = total + 60;
+            {
+                foreach (Producto item in misProductos)
+                {
+                    if (item.NumArticulo == 4564)
+                    {
+                        total = total + item.PrecioUnitario;
+                        item.Unidades--;
+                        if (item.Unidades <= 0)
+                        {
+                            MessageBox.Show("Disculpe nos quedamos sin stock del sierto producto:", item.Tipo);
+                        }
+                    }
+                }
+            }
+
+
+
+
 
             if (chk_donas.Checked)
-                total = total + 40;
+            {
+                foreach (Producto item in misProductos)
+                {
+                    if (item.NumArticulo == 1102)
+                    {
+                        total = total + item.PrecioUnitario;
+                        item.Unidades--;
+                        if (item.Unidades <= 0)
+                        {
+                            MessageBox.Show("Disculpe nos quedamos sin stock del sierto producto:", item.Tipo);
+                        }
+                    }
+                }
+            }
+
+
+
+
 
             if (chk_Cola.Checked)
-                total = total + 50;
+            {
+                foreach (Producto item in misProductos)
+                {
+                    if (item.NumArticulo == 4565)
+                    {
+                        total = total + item.PrecioUnitario;
+                        item.Unidades--;
+                        if (item.Unidades <= 0)
+                        {
+                            MessageBox.Show("Disculpe nos quedamos sin stock del sierto producto:", item.Tipo);
+                        }
+                    }
+                }
+
+            }
+
+
+
 
             if (chk_Raspados.Checked)
-                total = total + 60;
+            {
+
+                foreach (Producto item in misProductos)
+                {
+                    if (item.NumArticulo ==1103 )
+                    {
+                        total = total + item.PrecioUnitario;
+                        item.Unidades--;
+                        if (item.Unidades <= 0)
+                        {
+                            MessageBox.Show("Disculpe nos quedamos sin stock del sierto producto:", item.Tipo);
+                        }
+                    }
+                }
+            }
 
             if (chk_leche.Checked)
-                total = total + 40;
+            {
+                foreach (Producto item in misProductos)
+                {
+                    if (item.NumArticulo == 1104)
+                    {
+                        total = total + item.PrecioUnitario;
+                        item.Unidades--;
+                        if (item.Unidades <= 0)
+                        {
+                            MessageBox.Show("Disculpe nos quedamos sin stock del sierto producto:", item.Tipo);
+                        }
+                    }
+                }
+            }
 
+            
             if (chk_Desodo.Checked)
-                total = total + 90;
+            {
+
+                foreach (Producto item in misProductos)
+                {
+                    if (item.NumArticulo == 1982)
+                    {
+                        total = total + item.PrecioUnitario;
+                        item.Unidades--;
+                        if (item.Unidades <= 0)
+                        {
+                            MessageBox.Show("Disculpe nos quedamos sin stock del sierto producto:", item.Tipo);
+                        }
+                    }
+                }
+
+            }
 
             if (chk_dentifrico.Checked)
-                total = total + 60;
+            {
+                foreach (Producto item in misProductos)
+                {
+                    if (item.NumArticulo == 1983)
+                    {
+                        total = total + item.PrecioUnitario;
+                        item.Unidades--;
+                        if (item.Unidades <= 0)
+                        {
+                            MessageBox.Show("Disculpe nos quedamos sin stock del sierto producto:", item.Tipo);
+                        }
+                    }
+                }
+            }
+
+
 
             if (chk_salchchas.Checked)
-                total = total + 40;
+            {
+
+                foreach (Producto item in misProductos)
+                {
+                    if (item.NumArticulo == 1105)
+                    {
+                        total = total + item.PrecioUnitario;
+                        item.Unidades--;
+                        if (item.Unidades <= 0)
+                        {
+                            MessageBox.Show("Disculpe nos quedamos sin stock del sierto producto:", item.Tipo);
+                        }
+                    }
+                }
+            }
 
             if (chk_caramelos.Checked)
-                total = total + 2;
+            {
+                foreach (Producto item in misProductos)
+                {
+                    if (item.NumArticulo == 1106)
+                    {
+                        total = total + item.PrecioUnitario;
+                        item.Unidades--;
+                        if (item.Unidades <= 0)
+                        {
+                            MessageBox.Show("Disculpe nos quedamos sin stock del sierto producto:", item.Tipo);
+                        }
+                    }
+                }
+            }
 
 
             if (total > 0)
@@ -77,12 +244,18 @@ namespace Biblioteca_examen
                     double descuento = (total * 0.87);
                     MessageBox.Show($"EL TOTAL ES:{total} ");
 
-
-                    SoundPlayer player =
+                    try
+                    {
+                        SoundPlayer player =
 
                             player = new SoundPlayer(Application.StartupPath + @"\\sonidoApu\gracias.wav");
                     player.Play();
-
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error:" + ex);
+                       
+                    }
 
 
                 }
@@ -109,7 +282,25 @@ namespace Biblioteca_examen
 
         }
 
+        private void stockMenor10_Click(object sender, EventArgs e)
+        {
+            List<Producto> misProductos = new List<Producto>();
+            misProductos = Producto.HardcodeoProductos();
 
+           
+            foreach (Producto item in misProductos)
+            {
+                if (item.Unidades < 10)
+                {
+                    
+                        MessageBox.Show(item.Descripcion, "Los productos con stock menor a 10 son:");
+                    
+                }
+
+            }
+
+        }
+        
     }
 
 
@@ -123,32 +314,3 @@ namespace Biblioteca_examen
 
 
 
-
-/*
-
-
-}
-
-
-}
-}
-int comprado=0;
-
-if (checkProductos.Items.Count > 0)// count cuenta cuantos items hay .. entonces verifica que hallas seleccionado alguno
-{
-    foreach(string elemento in checkProductos.CheckedItems) // el checkedItems te agrega los seleccionados
-    {
-        lstComprado.Items.Add(elemento.ToString());// le agrega el elemento
-    }
-
-    //para limpiar seleccion
-
-    for(int i=0; i<checkProductos.Items.Count;i++)
-    {
-        checkProductos.SetItemChecked(i, false);    // setitemsChecked de true te lo pasa a false
-    }
-
-
-
-
-*/

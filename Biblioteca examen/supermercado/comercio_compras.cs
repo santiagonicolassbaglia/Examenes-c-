@@ -73,5 +73,11 @@ namespace supermercado
         {
 
         }
+
+        private void controlDeEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            compra2 opcionControl = new compra2();
+            opcionControl.Show();
+        }
     }
 }
