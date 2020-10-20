@@ -15,9 +15,9 @@ namespace supermercado
     {
         
 
-        cliente Cliente;
+        Cliente Cliente;
 
-        public comercio_compras(cliente Cliente)
+        public comercio_compras(Cliente Cliente)
         {
             InitializeComponent();
             this.Cliente = Cliente;
@@ -76,7 +76,7 @@ namespace supermercado
 
         private void controlDeEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            compra2 opcionControl = new compra2();
+            Compra2 opcionControl = new Compra2();
             opcionControl.Show();
         }
     }

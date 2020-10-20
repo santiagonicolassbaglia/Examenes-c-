@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Biblioteca_examen
 {
-   public class cliente:Persona
+   public class Cliente:Persona
     {
 
 
         private string usuario;
-        private string contraseña;
+        private string contrasenia;
 
 
 
@@ -37,27 +37,27 @@ namespace Biblioteca_examen
 
 
 
-        public string Contraseña
+        public string Contrasenia
         {
             get
             {
-                return contraseña;
+                return contrasenia;
             }
 
             set
             {
-                this.contraseña = value;
+                this.contrasenia = value;
             }
 
         }
 
 
 
-        public cliente(string nombre, int dni, string usuario, string contraseña,string apellido) :base(nombre,apellido,dni)
+        public Cliente(string nombre, int dni, string usuario, string contraseña,string apellido) :base(nombre,apellido,dni)
         {
             
             this.usuario = usuario;
-            this.contraseña = contraseña;
+            this.contrasenia = contraseña;
 
             
         }
@@ -90,20 +90,20 @@ namespace Biblioteca_examen
 
 
         // esta al pedo porque se hizo de otra manera pero  lo queria tener ! 
-        public static bool operator ==(cliente usuario, cliente contraseña)
+        public static bool operator ==(Cliente usuario, Cliente contraseña)
         {
-            return (usuario.Usuario == usuario.Contraseña);
+            return (usuario.Usuario == usuario.Contrasenia);
         }
 
 
 
-        public static bool operator !=(cliente usuario, cliente contraseña)
+        public static bool operator !=(Cliente usuario, Cliente contraseña)
         {
-            return !(usuario.Usuario == usuario.Contraseña);
+            return !(usuario.Usuario == usuario.Contrasenia);
         }
 
 
-        public static bool ValidarCliente(cliente auxCliente)
+        public static bool ValidarCliente(Cliente auxCliente)
         {
 
             if (auxCliente.Apellido == "Simpson")

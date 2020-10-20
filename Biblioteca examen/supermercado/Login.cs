@@ -18,14 +18,14 @@ namespace supermercado
     public partial class registroUsuario : Form
     {
 
-        public List<cliente> MiCliente;
+        public List<Cliente> clientes;
 
 
 
         public registroUsuario()
         {
             InitializeComponent();
-            MiCliente = new List<cliente>();
+            clientes = new List<Cliente>();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -37,15 +37,15 @@ namespace supermercado
 
         private void btn_alta_Click(object sender, EventArgs e)
         {
-            MiCliente = new List<cliente>();
+            clientes = new List<Cliente>();
 
             Alta_Cliente alta_Cliente = new Alta_Cliente();
             control_usuario alta_Usuario =new control_usuario();
 
             if (alta_Cliente.ShowDialog() == DialogResult.OK)
             {
-                MiCliente.Add(alta_Cliente.MiCliente);
-                MiCliente.Add(alta_Usuario.MiCliente);
+                clientes.Add(alta_Cliente.MiCliente);
+                clientes.Add(alta_Usuario.MiCliente);
                
                 MessageBox.Show(" Se Agregó correctamente ", " Alta de Cliente");
             }
@@ -64,22 +64,22 @@ namespace supermercado
 
             user = txt_usuario.Text;
             pass = txt_contraseña.Text;
-            MiCliente = control_usuario.HardcodeoClientes();
+            clientes = control_usuario.HardcodeoClientes();
             bool aux = false;
 
             comercio_compras wikieMart;
             if (!validaciones.ValidarString(user))
             {
 
-                foreach (cliente item in this.MiCliente)
+                foreach (Cliente item in this.clientes)
                 {
 
-                    if (item.Usuario == user && item.Contraseña == pass)
+                    if (item.Usuario == user && item.Contrasenia == pass)
                     {
                         wikieMart = new comercio_compras(item);
                         wikieMart.Show();// muestra el formulario .. abre la otra ventana
                         this.Hide();// cierra la otra venta del login
-                        MessageBox.Show($"Bienvenido!!!:", user, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show(user, $"Bienvenido!!!:", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         aux = true;
                         break;
 

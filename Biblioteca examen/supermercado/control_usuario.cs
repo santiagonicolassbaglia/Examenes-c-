@@ -16,18 +16,18 @@ namespace supermercado
     {
 
 
-        static List<cliente> listaCliente;
+        static List<Cliente> listaCliente;
         int i;
-        cliente miCliente;
+        Cliente miCliente;
         public control_usuario()
         {
-            listaCliente = new List<cliente>();
+            listaCliente = new List<Cliente>();
             InitializeComponent();
         }
 
 
 
-        public cliente MiCliente { get => miCliente; set => miCliente = value; }
+        public Cliente MiCliente { get => miCliente; set => miCliente = value; }
 
         private void btn_salir_Click(object sender, EventArgs e)
         {
@@ -59,7 +59,7 @@ namespace supermercado
             int dni;
             if (int.TryParse(this.text_dni.Text, out dni))
             {
-               miCliente = new cliente(this.txt_nombre.Text,
+               miCliente = new Cliente(this.txt_nombre.Text,
                      dni,
                     this.text_usuario.Text, this.text_contraseña.Text, this.txT_apellido.Text);
                 
@@ -102,23 +102,23 @@ namespace supermercado
         }
 
 
-        public static List<cliente> HardcodeoClientes()
+        public static List<Cliente> HardcodeoClientes()
         {
-            List<cliente> listaCLientes = new List<cliente>();
+            List<Cliente> listaCLientes = new List<Cliente>();
 
-            listaCLientes.Add ( new cliente("Lucas", 1435, "elLuqui", "elprof", "simpson"));
-            listaCLientes.Add(new cliente("manuel", 1435,"elLuqui","elPRof","sbaglia"));
-            listaCLientes.Add(new cliente("Juan", 143855,"homero", "simpson", "simpson"));
-            listaCLientes.Add(new cliente("manuel", 14535,"santi","1234","Rodriguez"));
-            listaCLientes.Add(new cliente("ezequiel", 14135,"elEze","elPRof","ogiguins"));
-            listaCLientes.Add(new cliente("manuel", 1842135,"santi","12345","Rodriguez"));
-            listaCLientes.Add(new cliente("manuel", 1435,"elLuqui","elPRof","Rodriguez"));
-            listaCLientes.Add(new cliente("santi", 1874435, "alan", "elPRof","Rodriguez"));
-            listaCLientes.Add(new cliente("homero", 147358,"homer","hombrepai", "simpson"));
-            listaCLientes.Add(new cliente("bart", 143785, "bart_96", "elBarto", "simpson"));
-            listaCLientes.Add(new cliente("lisa", 1435,"elLuqui","elPRof", "simpson"));
-            listaCLientes.Add(new cliente("santi", 1121435,"elLuqui","elPRof", "ogiguins"));
-            listaCLientes.Add(new cliente("manuel", 10435,"elLuqui","elPRof","Rodriguez"));
+            listaCLientes.Add(new Cliente("Lucas", 1435, "elLuqui", "elprof", "simpson"));
+            listaCLientes.Add(new Cliente("manuel", 1435,"elLuqui","elPRof","sbaglia"));
+            listaCLientes.Add(new Cliente("Juan", 143855,"homero", "simpson", "simpson"));
+            listaCLientes.Add(new Cliente("manuel", 14535,"santi","1234","Rodriguez"));
+            listaCLientes.Add(new Cliente("ezequiel", 14135,"elEze","elPRof","ogiguins"));
+            listaCLientes.Add(new Cliente("manuel", 1842135,"santi","12345","Rodriguez"));
+            listaCLientes.Add(new Cliente("manuel", 1435,"elLuqui","elPRof","Rodriguez"));
+            listaCLientes.Add(new Cliente("santi", 1874435, "alan", "elPRof","Rodriguez"));
+            listaCLientes.Add(new Cliente("homero", 147358,"homer","hombrepai", "simpson"));
+            listaCLientes.Add(new Cliente("bart", 143785, "bart_96", "elBarto", "simpson"));
+            listaCLientes.Add(new Cliente("lisa", 1435,"elLuqui","elPRof", "simpson"));
+            listaCLientes.Add(new Cliente("santi", 1121435,"elLuqui","elPRof", "ogiguins"));
+            listaCLientes.Add(new Cliente("manuel", 10435,"elLuqui","elPRof","Rodriguez"));
 
 
             return listaCLientes;

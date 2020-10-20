@@ -16,9 +16,9 @@ namespace supermercado
     public partial class Alta_Cliente : Form
     {
 
-        private cliente miCliente;
+        private Cliente miCliente;
 
-        public cliente MiCliente { get => miCliente; set => miCliente = value; }
+        public Cliente MiCliente { get => miCliente; set => miCliente = value; }
 
 
 
@@ -33,7 +33,7 @@ namespace supermercado
             int dni;
             if (int.TryParse(this.dnI_alta.Text, out dni ))
             {
-                miCliente = new cliente(this.nombre_alta.Text,
+                miCliente = new Cliente(this.nombre_alta.Text,
                      dni,
                     this.usuario_alta.Text,this.contraseña_alta.Text, this.apellido_alta.Text);
 

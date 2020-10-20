@@ -14,12 +14,12 @@ namespace Biblioteca_examen
 {
     public partial class compras : Form
     {
-        public List<cliente> MiClientess;
+        public List<Cliente> MiClientess;
 
-        cliente ClienteOk;
+        Cliente ClienteOk;
         Producto ProductoOk;
 
-        public compras(cliente Cliente)
+        public compras(Cliente Cliente)
         {
             InitializeComponent();
             this.ClienteOk = Cliente;

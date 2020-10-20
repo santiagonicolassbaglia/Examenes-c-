@@ -11,21 +11,21 @@ using System.Windows.Forms;
 
 namespace supermercado
 {
-    public partial class compra2 : Form
+    public partial class Compra2 : Form
     {
-        static List<empleados> ListaEmpleado;
+        static List<Empleado> ListaEmpleados= new List<Empleado>();
         int i;
-        empleados MiEmpleadooo;
+        Empleado MiEmpleadooo;
 
-        public compra2()
+        public Compra2()
         {
-            ListaEmpleado = new List<empleados>();
+            
             InitializeComponent();
 
             // dataGridView_Empleados = MiEmpleado.Add;
         }
 
-        public empleados MiEmpleado { get => MiEmpleadooo; set => MiEmpleadooo= value; }
+        public Empleado MiEmpleado { get => MiEmpleadooo; set => MiEmpleadooo= value; }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -61,10 +61,10 @@ namespace supermercado
             int dni;
             if (int.TryParse(this.txtDni.Text, out dni)  && int.TryParse(this.txtVentas.Text, out ventas))
             {
-                MiEmpleado = new empleados(this.txtNombre.Text,
+                MiEmpleado = new Empleado(this.txtNombre.Text,
                             this.txtApellido.Text, dni, ventas);
 
-                ListaEmpleado.Add(MiEmpleado);
+                ListaEmpleados.Add(MiEmpleado);
                 this.DialogResult = DialogResult.OK;
             }
 
@@ -95,7 +95,7 @@ namespace supermercado
         private void compra2_Load(object sender, EventArgs e)
         {
             
-            empleados.HardcodeoEmpleados();
+            Empleado.HardcodeoEmpleados();
             
         }
 
@@ -104,7 +104,7 @@ namespace supermercado
             if (i != -1)
             {
                 dataGridView_Empleados.Rows.RemoveAt(i);
-                ListaEmpleado.Remove(MiEmpleado);
+                ListaEmpleados.Remove(MiEmpleado);
             }
         }
 
@@ -112,12 +112,13 @@ namespace supermercado
 
         private void EmpleadoConMenosVentas_Click(object sender, EventArgs e)
         {
-            List<empleados> misEmpleados = new List<empleados>();
-            misEmpleados = empleados.HardcodeoEmpleados();
+            List<Empleado> misEmpleados = new List<Empleado>();
+            misEmpleados = Empleado.HardcodeoEmpleados();
 
-            foreach (empleados item in misEmpleados)
+            misEmpleados.AddRange(ListaEmpleados);
+            foreach (Empleado item in misEmpleados)
             {
-                if (item.Ventas < 10)
+                if (item.cantVentas < 10)
                 {
 
                        MessageBox.Show(item.Nombre,"El empleado con ventas menores a 10 son");

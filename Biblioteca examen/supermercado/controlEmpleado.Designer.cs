@@ -1,6 +1,6 @@
 ﻿namespace supermercado
 {
-    partial class compra2
+    partial class Compra2
     {
         /// <summary>
         /// Required designer variable.
