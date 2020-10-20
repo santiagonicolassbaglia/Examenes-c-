@@ -12,7 +12,7 @@ namespace Biblioteca_examen
 
 
         /// </summary>
-        /// <param name="numArticulo">Numero de articulo del producto refrigerado</param>
+        /// <param name="numArticulo">Numero de articulo del producto de cerveza y gaseosas</param>
         /// <param name="descripcion">Descripción del producto refrigerado</param>
         /// <param name="precio">Precio del producto refrigerado</param>
         /// <param name="stock">Stock del producto refrigerado</param>
