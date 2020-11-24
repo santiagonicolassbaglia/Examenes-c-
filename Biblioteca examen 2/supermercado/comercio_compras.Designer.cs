@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(comercio_compras));
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.VerEnTiempoReal = new System.Windows.Forms.Button();
-            this.btn_Deliberi = new System.Windows.Forms.Button();
-            this.txt_tel = new System.Windows.Forms.TextBox();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionControl = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +39,9 @@
             this.opcionSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesión = new System.Windows.Forms.ToolStripMenuItem();
             this.salir = new System.Windows.Forms.ToolStripMenuItem();
+            this.VerEnTiempoReal = new System.Windows.Forms.Button();
+            this.btn_Deliberi = new System.Windows.Forms.Button();
+            this.txt_tel = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,42 +54,21 @@
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Desktop;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.inventarioToolStripMenuItem,
             this.opcionSalir});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
-            // 
-            // VerEnTiempoReal
-            // 
-            resources.ApplyResources(this.VerEnTiempoReal, "VerEnTiempoReal");
-            this.VerEnTiempoReal.BackColor = System.Drawing.SystemColors.Desktop;
-            this.VerEnTiempoReal.Name = "VerEnTiempoReal";
-            this.VerEnTiempoReal.UseVisualStyleBackColor = false;
-            this.VerEnTiempoReal.Click += new System.EventHandler(this.VerEnTiempoReal_Click);
-            // 
-            // btn_Deliberi
-            // 
-            resources.ApplyResources(this.btn_Deliberi, "btn_Deliberi");
-            this.btn_Deliberi.BackColor = System.Drawing.Color.Maroon;
-            this.btn_Deliberi.Name = "btn_Deliberi";
-            this.btn_Deliberi.UseVisualStyleBackColor = false;
-            this.btn_Deliberi.Click += new System.EventHandler(this.btn_Deliberi_Click);
-            // 
-            // txt_tel
-            // 
-            resources.ApplyResources(this.txt_tel, "txt_tel");
-            this.txt_tel.Name = "txt_tel";
             // 
             // archivoToolStripMenuItem
             // 
-            resources.ApplyResources(this.archivoToolStripMenuItem, "archivoToolStripMenuItem");
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opcionControl,
             this.controlDeEmpleadoToolStripMenuItem});
+            resources.ApplyResources(this.archivoToolStripMenuItem, "archivoToolStripMenuItem");
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             // 
             // opcionControl
@@ -106,9 +85,9 @@
             // 
             // inventarioToolStripMenuItem
             // 
-            resources.ApplyResources(this.inventarioToolStripMenuItem, "inventarioToolStripMenuItem");
             this.inventarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opcionCompra});
+            resources.ApplyResources(this.inventarioToolStripMenuItem, "inventarioToolStripMenuItem");
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
             // 
             // opcionCompra
@@ -119,10 +98,10 @@
             // 
             // opcionSalir
             // 
-            resources.ApplyResources(this.opcionSalir, "opcionSalir");
             this.opcionSalir.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cerrarSesión,
             this.salir});
+            resources.ApplyResources(this.opcionSalir, "opcionSalir");
             this.opcionSalir.Name = "opcionSalir";
             // 
             // cerrarSesión
@@ -136,6 +115,27 @@
             resources.ApplyResources(this.salir, "salir");
             this.salir.Name = "salir";
             this.salir.Click += new System.EventHandler(this.salir_Click);
+            // 
+            // VerEnTiempoReal
+            // 
+            this.VerEnTiempoReal.BackColor = System.Drawing.SystemColors.Desktop;
+            resources.ApplyResources(this.VerEnTiempoReal, "VerEnTiempoReal");
+            this.VerEnTiempoReal.Name = "VerEnTiempoReal";
+            this.VerEnTiempoReal.UseVisualStyleBackColor = false;
+            this.VerEnTiempoReal.Click += new System.EventHandler(this.VerEnTiempoReal_Click);
+            // 
+            // btn_Deliberi
+            // 
+            resources.ApplyResources(this.btn_Deliberi, "btn_Deliberi");
+            this.btn_Deliberi.BackColor = System.Drawing.Color.Maroon;
+            this.btn_Deliberi.Name = "btn_Deliberi";
+            this.btn_Deliberi.UseVisualStyleBackColor = false;
+            this.btn_Deliberi.Click += new System.EventHandler(this.btn_Deliberi_Click);
+            // 
+            // txt_tel
+            // 
+            resources.ApplyResources(this.txt_tel, "txt_tel");
+            this.txt_tel.Name = "txt_tel";
             // 
             // pictureBox1
             // 
@@ -157,7 +157,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "comercio_compras";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -167,8 +166,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
@@ -182,5 +179,6 @@
         private System.Windows.Forms.Button VerEnTiempoReal;
         private System.Windows.Forms.Button btn_Deliberi;
         private System.Windows.Forms.TextBox txt_tel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

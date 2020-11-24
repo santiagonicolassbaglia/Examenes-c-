@@ -36,3 +36,14 @@ C:\Users\santi\Desktop\tp4 2..0 - copia\Examenes-c-\Examenes-c-sharp\Biblioteca 
 C:\Users\santi\Desktop\tp4 2..0 - copia\Examenes-c-\Examenes-c-sharp\Biblioteca examen\Biblioteca examen\obj\Debug\Biblioteca_examen.csproj.CopyComplete
 C:\Users\santi\Desktop\tp4 2..0 - copia\Examenes-c-\Examenes-c-sharp\Biblioteca examen\Biblioteca examen\obj\Debug\Biblioteca examen.dll
 C:\Users\santi\Desktop\tp4 2..0 - copia\Examenes-c-\Examenes-c-sharp\Biblioteca examen\Biblioteca examen\obj\Debug\Biblioteca examen.pdb
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Biblioteca examen\bin\Debug\Biblioteca examen.dll
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Biblioteca examen\bin\Debug\Biblioteca examen.pdb
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Biblioteca examen\bin\Debug\Archivos.dll
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Biblioteca examen\bin\Debug\Archivos.pdb
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Biblioteca examen\obj\Debug\Biblioteca_examen.csprojAssemblyReference.cache
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Biblioteca examen\obj\Debug\Biblioteca_examen.Properties.Resources.resources
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Biblioteca examen\obj\Debug\Biblioteca_examen.csproj.GenerateResource.cache
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Biblioteca examen\obj\Debug\Biblioteca_examen.csproj.CoreCompileInputs.cache
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Biblioteca examen\obj\Debug\Biblioteca_examen.csproj.CopyComplete
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Biblioteca examen\obj\Debug\Biblioteca examen.dll
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Biblioteca examen\obj\Debug\Biblioteca examen.pdb
