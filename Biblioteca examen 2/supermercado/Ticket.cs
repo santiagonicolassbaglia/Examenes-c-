@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Archivos;
+using Biblioteca_examen;
+
+namespace supermercado
+{
+    public partial class Ticket : Form
+    {
+        public Ticket()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<Producto> auxProd = new List<Producto>();
+
+            string NombreArchivo = " Santiago Sbaglia Ticket";
+            string ruta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            string producto = txt_tikprod.Text;
+             string monto =txt_tikMon.Text ;
+           DateTime localDate = DateTime.Now;
+
+            string texto = "--------Nuevo Ticket---------\n\n\n" +
+                      "-------------TICKET----------------\n " +
+                          "************** PRODUCTO:" + producto + "****************\n" +
+                          "\n************** MONTO: " + monto +
+                          "\n************** HORA: " + localDate.ToString(); 
+
+
+
+
+
+            FIle<string>.EscribirArchivoTexto(ruta, NombreArchivo, texto, true);
+            this.Hide();// cierra la otra venta del login
+            MessageBox.Show( $"El ticket fue creado con exito, y se encuentra en el escritorio !:","Ticket", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+        }
+
+        private void horaFecha_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("HH:mm:ss");
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+    }
+}
