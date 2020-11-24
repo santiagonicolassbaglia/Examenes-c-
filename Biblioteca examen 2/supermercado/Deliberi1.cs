@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Biblioteca_examen;
 using System.Threading;
+using Archivos;
 
 namespace supermercado
 {
@@ -62,6 +63,8 @@ namespace supermercado
                     {
                         DatosDeliberi.Add(item.DatosCompletosProd());
                         listView1Del.Items.Add(item.DatosCompletosProd());
+                     
+                       
                       
                     }
                 }

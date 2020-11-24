@@ -27,7 +27,7 @@ namespace Biblioteca_examen
 
 
 
-
+        //valida usuario
 
 
         public static Cliente validaUsuario(string usuario, string pass)

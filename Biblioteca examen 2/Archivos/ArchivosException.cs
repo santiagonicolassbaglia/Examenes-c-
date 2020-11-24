@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Archivos
 {
-    class ArchivosException
+    class ArchivosException: Exception
     {
+        #region constructores
+
+        public ArchivosException(Exception innerException) : base("Ocurrio un error trabajando con el archivo", innerException)
+        {
+
+        }
+        #endregion
     }
 }

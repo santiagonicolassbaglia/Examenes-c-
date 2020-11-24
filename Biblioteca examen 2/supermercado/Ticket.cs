@@ -40,7 +40,7 @@ namespace supermercado
 
             Guardar(texto);
 
-            Serializador<String>.Leer();
+            Serializador<RichTextBoxLanguageOptions>.Leer();
 
 
 

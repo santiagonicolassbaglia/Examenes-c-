@@ -22,3 +22,9 @@ C:\Users\santi\Desktop\tp4 2..0\Examenes-c-\Examenes-c-sharp\Biblioteca examen\A
 C:\Users\santi\Desktop\tp4 2..0\Examenes-c-\Examenes-c-sharp\Biblioteca examen\Archivos\obj\Debug\Archivos.csproj.CoreCompileInputs.cache
 C:\Users\santi\Desktop\tp4 2..0\Examenes-c-\Examenes-c-sharp\Biblioteca examen\Archivos\obj\Debug\Archivos.dll
 C:\Users\santi\Desktop\tp4 2..0\Examenes-c-\Examenes-c-sharp\Biblioteca examen\Archivos\obj\Debug\Archivos.pdb
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Archivos\bin\Debug\Archivos.dll
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Archivos\bin\Debug\Archivos.pdb
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Archivos\obj\Debug\Archivos.csprojAssemblyReference.cache
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Archivos\obj\Debug\Archivos.csproj.CoreCompileInputs.cache
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Archivos\obj\Debug\Archivos.dll
+C:\Users\santi\Desktop\examen c-sharp\Examenes-c-sharp\Biblioteca examen 2\Archivos\obj\Debug\Archivos.pdb

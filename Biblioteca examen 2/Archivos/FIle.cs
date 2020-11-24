@@ -74,10 +74,7 @@ namespace Archivos
 
 
 
-        public void Ticket(T auxT)
-        {
-
-        }
+       
 
 
 
