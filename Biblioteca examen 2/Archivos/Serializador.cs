@@ -6,57 +6,80 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
+using System.IO;
 
 namespace Archivos
 {
-   public class Serializador<T>
-    where T: new()
+   public class Serializador<T> : IArchivo<T>
+
     {
-        public void Serializar ( T objeto,string rutaCompleta)
+        /// <summary>
+        /// Metodo implentado de la interfaz IArchivo
+        /// </summary>
+        /// <param name="archivo">ruta del archivo</param>
+        /// <param name="datos">datos a ser guardado</param>
+        /// <returns>true si funciono false si no</returns>
+        public bool Guardar(string archivo, T datos)
         {
-            XmlTextWriter writer = null;
-            XmlSerializer serializer = null;
- 
             try
             {
-                
-                writer = new XmlTextWriter(rutaCompleta, Encoding.UTF8);
-                writer.Formatting = Formatting.Indented;
-                serializer = new XmlSerializer(typeof(T));
-                serializer.Serialize(writer, objeto);
-            }
-            finally
-            {
-                if (writer != null)
+                XmlSerializer xml = new XmlSerializer(typeof(T));
+
+                using (StreamWriter sw = new StreamWriter(archivo))
                 {
-                    writer.Close();
+                    xml.Serialize(sw, datos);
+
+                    return true;
                 }
             }
 
-
-
-        }
-
-
-
-
-
-
-        public T Deserializar(string rutaCompleta)
-        {
-            using (XmlTextReader reader = new XmlTextReader(rutaCompleta))
+            catch (Exception e)
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(T));
-                return (T)serializer.Deserialize(reader);
-
+                throw new ArchivosException(e);
             }
+        }
 
+        /// <summary>
+        /// Metodo implentado de la interfaz IArchivo
+        /// </summary>
+        /// <param name="archivo">ruta del archivo</param>
+        /// <param name="datos">datos a devolver es un parametro de tipo OUT</param>
+        /// <returns>true si funciono false si no</returns>
+        public bool Leer(string archivo, out T datos)
+        {
+            try
+            {
+                XmlSerializer xml = new XmlSerializer(typeof(T));
+
+                using (TextReader tr = new StreamReader(archivo))
+                {
+                    datos = (T)xml.Deserialize(tr);
+
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new ArchivosException(e);
+            }
         }
 
 
 
 
 
+
+        public static List<T> Leer()
+        {
+            List<T> datos = new List<T>();
+            string path = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "santi.xml");
+            Serializador<List<T>> auxPedidos = new Serializador<List<T>>();
+
+            auxPedidos.Leer(path, out datos);
+
+            return datos;
+
+        }
 
 
     }

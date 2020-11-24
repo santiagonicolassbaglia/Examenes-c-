@@ -47,6 +47,7 @@
     <Compile Include="DB.cs" />
     <Compile Include="Deliberi.cs" />
     <Compile Include="Empleado.cs" />
+    <Compile Include="Extenciones.cs" />
     <Compile Include="ISerializable.cs" />
     <Compile Include="persona.cs" />
     <Compile Include="Proceso.cs" />

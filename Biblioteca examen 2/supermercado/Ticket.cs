@@ -34,9 +34,13 @@ namespace supermercado
                       "-------------TICKET----------------\n " +
                           "************** PRODUCTO:" + producto + "****************\n" +
                           "\n************** MONTO: " + monto +
-                          "\n************** HORA: " + localDate.ToString(); 
+                          "\n************** HORA: " + localDate.ToString();
 
 
+
+            Guardar(texto);
+
+            Serializador<String>.Leer();
 
 
 
@@ -44,12 +48,32 @@ namespace supermercado
             this.Hide();// cierra la otra venta del login
             MessageBox.Show( $"El ticket fue creado con exito, y se encuentra en el escritorio !:","Ticket", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
+
+
         }
 
         private void horaFecha_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("HH:mm:ss");
             lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+
+
+
+
+
+
+
+        public static bool Guardar(string tex)
+        {
+            Serializador<string> xml = new Serializador<string>();
+            string archivo = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + ".\\Ticket.xml";
+            if (xml.Guardar(archivo, tex))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
